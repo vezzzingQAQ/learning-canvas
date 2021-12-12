@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../support/style.css">
+    <title>chw2</title>
+</head>
+<body>
+    <!--canvas中单独设置的宽高和style中设置的有区别【像素】-->
+    <canvas id="vcas" width="600" height="600">
+        您的浏览器不支持canvas
+    </canvas>        
+    <script>
+        var startX=-200;
+
+        var canvas1=document.querySelector("#vcas");
+        var context=canvas1.getContext("2d");
+
+        context.font='50px sans-serif';
+
+        context.fillStyle='rgb(0,255,255)';
+        context.fillText("vezzzing!!",100,100);
+
+        context.strokeStyle='rgb(255,255,0)';
+        context.strokeText("23333",100,200);
+
+        context.shadowBlur=1;
+        context.shadowColor='rgb(0,255,0)';
+        context.shadowOffsetX=10;
+        context.shadowOffsetY=10;
+        context.fillText("vezzzing yyds",100,300);
+
+        setInterval(function(){
+            startX+=5;
+            if(startX>700){
+                startX=-200;
+            }
+            context.clearRect(0,350,600,150);
+            context.strokeStyle='rgb(255,255,0)';
+            context.strokeText("23333",startX,400);
+            context.shadowColor='transparent';
+        },10);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../support/style.css">
+    <title>chw2</title>
+</head>
+<body>
+    <!--canvas中单独设置的宽高和style中设置的有区别【像素】-->
+    <canvas id="vcas" width="500" height="500">
+        您的浏览器不支持canvas
+    </canvas>        
+    <script>
+        var canvas1=document.querySelector("#vcas");
+        //创建上下文对象【画笔】
+        var context=canvas1.getContext("2d");
+        //绘制路径
+        context.beginPath();
+        context.moveTo(250,250);
+        for(let i=0;i<100;i++){
+            context.lineTo((Math.random()*400-200)+250,(Math.random()*400-200)+250);
+        }
+        context.closePath();
+
+        context.strokeStyle='rgb(255,255,255,0.8)';
+        context.lineWidth=1;
+        context.stroke();
+    </script>
+</body>
+</html>
