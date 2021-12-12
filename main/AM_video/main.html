@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../support/style.css">
+    <title>chw2</title>
+    <style>
+        video{
+            position: absolute;
+            left: 640px;
+        }
+        #vcas{
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(0,0);
+        }
+    </style>
+</head>
+<body>
+    <!--canvas中单独设置的宽高和style中设置的有区别【像素】-->
+    <canvas id="vcas" width="640" height="600">
+        您的浏览器不支持canvas
+    </canvas> 
+    <video width="640" height="360" src="bg.mp4" controls="controls"></video>       
+    <script>
+        var canvas1=document.querySelector("#vcas");
+        var video1=document.querySelector("video");
+
+        var itid;
+
+        var context=canvas1.getContext("2d");
+        video1.onplay=function(){
+            itid=setInterval(function(){
+                context.drawImage(video1, 0, 0, 640, 360);
+                context.fillStyle='rgb(0,0,0)';
+                context.font='20px sans-serif';
+                context.fillText("by vezzzing ( ´･･)ﾉ(._.`)",20 ,30);
+            },16);
+        }
+        video1.onpause=function(){
+            clearInterval(itid);
+        }
+    </script>
+</body>
+</html>

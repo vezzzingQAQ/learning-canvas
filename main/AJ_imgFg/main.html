@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../support/style.css">
+    <title>chw2</title>
+</head>
+<body>
+    <!--canvas中单独设置的宽高和style中设置的有区别【像素】-->
+    <canvas id="vcas" width="500" height="500">
+        您的浏览器不支持canvas
+    </canvas>        
+    <script>
+        var canvas1=document.querySelector("#vcas");
+        //创建上下文对象【画笔】
+        var context=canvas1.getContext("2d");
+        var img=new Image();
+        img.src="AAH.jpg";
+        img.onload=function(){//载入后再绘制
+            context.drawImage(img,50,50,200,230);
+            var img2=new Image();
+            img2.src="https://vezzzingqaq.github.io/aboutVezzzing/about/pictures/AAD.png";
+            img2.onload=function(){
+               context.drawImage(img2,230,50);    
+            }
+        }
+    </script>
+</body>
+</html>

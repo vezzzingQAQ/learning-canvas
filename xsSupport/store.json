@@ -75,6 +75,48 @@
             "name":"font绘制文字",
             "date":"2021.12.12",
             "ips":1
+        },
+        {
+            "identifier":"AI",
+            "path":"img",
+            "name":"drawImage绘制图像",
+            "date":"2021.12.12",
+            "ips":1
+        },
+        {
+            "identifier":"AJ",
+            "path":"imgFg",
+            "name":"图像覆盖关系",
+            "date":"2021.12.12",
+            "ips":1
+        },
+        {
+            "identifier":"AK",
+            "path":"imgText",
+            "name":"图片水印",
+            "date":"2021.12.12",
+            "ips":1
+        },
+        {
+            "identifier":"AL",
+            "path":"imgAdvanced",
+            "name":"drawImage高级应用",
+            "date":"2021.12.12",
+            "ips":1
+        },
+        {
+            "identifier":"AM",
+            "path":"video",
+            "name":"canvas播放视频",
+            "date":"2021.12.12",
+            "ips":1
+        },
+        {
+            "identifier":"AN",
+            "path":"getPixel",
+            "name":"获取像素信息",
+            "date":"2021.12.12",
+            "ips":1
         }
     ]
 }
